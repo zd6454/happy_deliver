@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/order/index/index",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/deliver/index/index",
+    "pages/my/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#7ed0fc",
+    "borderStyle":"white",
+    "list": [{
+      "selectedIconPath": "icons/order2.png",
+      "iconPath": "icons/order.png",
+      "pagePath": "pages/order/index/index",
+      "text": "订单"
+    }, {
+      "selectedIconPath": "icons/fly2.png",
+      "iconPath": "icons/fly.png",
+      "pagePath": "pages/deliver/index/index",
+      "text": "开始送货"
+    }, {
+      "selectedIconPath": "icons/my2.png",
+      "iconPath": "icons/my.png",
+      "pagePath": "pages/my/index/index",
+      "text": "我的"
+    }]
+  }
+}
