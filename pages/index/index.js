@@ -19,6 +19,12 @@ Page({
       isLogin:true,
     })
   },
+  login(){
+    wx.switchTab({
+      url: '../deliver/index/index',
+    })
+  
+  },
   onLoad: function () {
   
   },
