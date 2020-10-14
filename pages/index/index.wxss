@@ -1,21 +1,103 @@
-/**index.wxss**/
-.userinfo {
+.page{
+ margin:40rpx;
+}
+.headimage{
+ height:600rpx;
+ width: 100%;
+ box-sizing: border-box;
+ display: -webkit-box;
+ display: -webkit-flex;
+ background-color: #ffffff;
+}
+.setbox{
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  width:100%;
+}
+.headimage .logoset{
+  width:562rpx;
+  height: 562rpx;
+  margin-top: 40rpx;
+  border-radius: 110rpx ;
+  box-shadow: 0rpx 10rpx 90rpx 10rpx rgb(119, 198, 235);
+}
+.body{
+  margin-top: 40rpx;
+  justify-content: center;
+  display: block;
+}
+.body .fontset{
+  text-align: center;
+  font-size: larger;
+  color:rgb(109, 203, 247) ;
+}
+.body .choose{
+  margin-top: 60rpx;
   align-items: center;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.bt1{
+  margin-top: 20rpx; 
+  background-color: #5bb6eb;
+  color: white;
+  border-radius:40rpx ;
+}
+.bt11{
+  margin-top: 20rpx; 
+  background-color: #a5d5f5;
+  color: white;
+  border-radius:40rpx ;
+}
+.bt2{
+ margin-top: 20rpx; 
+ background-color: #6889f5;
+ color: white;
+ border-radius:40rpx ;
+}
+.bt22{
+  margin-top: 20rpx; 
+  background-color: #86b7f7;
+  color: white;
+  border-radius:40rpx ;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.login{
+  width:100%;
+  margin-top: 40rpx;
 }
+.info{
 
-.usermotto {
-  margin-top: 200px;
+}
+.name{
+ display: flex;
+}
+.iconset{
+  width:46rpx;
+  height:46rpx;
+}
+.inputset{
+  width:100%;
+  margin-left: 50rpx;
+}
+.passwork{
+  display: flex;
+  margin-top: 15rpx;
+}
+.line{
+ background: #41cef9;
+ width: 100%;
+ height: 5rpx;
+ margin-top: 30rpx;
+}
+.comfirm{
+ margin-top: 50rpx;
+}
+.bt3{
+  background-color: #0976f3;
+  color: white;
+  border-radius:40rpx ;
+}
+.bt33{
+  background-color: #c0daf8;
+  color: white;
+  border-radius:40rpx ;
 }

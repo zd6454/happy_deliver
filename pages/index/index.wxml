@@ -1,13 +1,33 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <view class="page">   
+    <view class="headimage">
+     <view class="setbox">
+        <image class="logoset" src="../../icons/logo.png"></image>
+     </view>
+    </view>
+    <view class="body" wx:if="{{!isLogin}}">
+       <view class="fontset">
+        请选择演示时间
+       </view>
+       <view class="choose">
+          <button  class="bt1" style="width:60%" hover-class="bt11" bindtap="chooseFirst">6月6日</button>
+          <button  class="bt2" style="width:60%" hover-class="bt22" bindtap="chooseSecond">6月23日</button>
+       </view>
+    </view>
+    <view class="login" wx:else>
+      <view class="info">
+       <view class="name">
+         <image class="iconset" src="../../icons/name.png"></image>
+          <input class="inputset" placeholder="请输入账号"></input>
+       </view>
+       <view class="line"></view>
+       <view class="passwork">
+         <image class="iconset" src="../../icons/passwork.png"></image> 
+         <input class="inputset" placeholder="请输入密码"></input>
+       </view>
+       <view class="line"></view>
+      </view>
+      <view class="comfirm">
+         <button style="width:80%" class="bt3" hover-class="bt33">登录</button>
+      </view>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>
