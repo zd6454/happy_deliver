@@ -4,6 +4,8 @@
     "pages/order/index/index",
     "pages/logs/logs",
     "pages/deliver/index/index",
+    "pages/deliver/unload/unload",
+    "pages/deliver/complete/complete",
     "pages/my/index/index"
   ],
   "window":{

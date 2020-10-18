@@ -1,2 +1,5 @@
-<!--pages/my/index/index.wxml-->
-<text>pages/my/index/index.wxml</text>
+<view>
+  <view class="head"></view>
+  <view class="body"></view>
+  <view class="foot"></view>
+</view>

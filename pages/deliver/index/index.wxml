@@ -1,2 +1,34 @@
 <!--pages/deliver/index/index.wxml-->
-<text>pages/deliver/index/index.wxml</text>
+<view class="page">
+    <view class="map">
+      <map class="mapdetail" longitude="116.451028" latitude="39.949643" scale="12" markers="{{markers}}" polyline="{{polyline}}">
+      
+      </map>
+    </view>
+    <view class="body">
+     <button catchtouchmove="buttonMove" bindtouchstart ="buttonStart" bindtouchend="buttonEnd" style="top:{{buttonTop}}px;left:{{buttonLeft}}px;width:200rpx;" bindtap="deliverStart" hover-class="fixbtn2" class="{{isDeliver==true?'fixbtn1':'fixbtn'}}">
+      {{buttomtext}}
+     </button>
+    </view>
+    <view class="foot">
+       <view class="current">
+        <view class="currentset">
+          <text>{{currentTime}}</text>
+        </view>
+        <text>当前时间</text>
+       </view>
+       <view class="pass">
+         <view class="passset">
+           <text>{{passTime}}min</text>
+         </view>
+         <text>已用时间</text>
+       </view>
+       <view class="last">
+         <view  class="lastset" >
+          <text>{{lastTime}}</text>
+         </view>
+         
+         <text>最晚时间</text>
+       </view>
+    </view>
+</view>

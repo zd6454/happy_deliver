@@ -1,0 +1,18 @@
+<!--pages/deliver/unload/unload.wxml-->
+  <view class="page">
+    <view class="head">
+      <view class="unload">正在卸货</view>
+      <view class="line"></view>
+    </view> 
+    <view class="body">
+      <view wx:for="{{unloadinfo}}" wx:key="index" > 
+        <view class="infoset">
+          <view class="titleset">{{item.title}}:</view>  
+          <view class="detail">{{item.info}}</view>  
+        </view>
+      </view>
+    </view> 
+    <view class="foot">
+      <button type="primary" style="width:80%" class="continue">继续派送</button>
+    </view> 
+   </view>

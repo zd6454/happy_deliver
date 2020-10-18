@@ -1,1 +1,89 @@
 /* pages/deliver/index/index.wxss */
+.page{
+
+}
+.map{
+  height: 1200rpx;
+  width:100%;
+}
+.mapdetail{
+   height: 100%;
+   width:800rpx;
+}
+.fixbtn{
+  width: 200rpx;
+  height:200rpx;
+  border-radius:180rpx;
+  position:fixed;
+  background:#4bcafc;
+  text-align: center;
+  line-height:150rpx;
+  /* flex-wrap: warp;
+  white-space: pre-wrap; */
+  font-size:default;
+  color:#fff;
+  z-index: 999;
+  opacity:0.9;
+}
+.fixbtn1{
+  width: 200rpx;
+  height:200rpx;
+  border-radius:180rpx;
+  position:fixed;
+  background:#f1e20d;
+  text-align: center;
+  line-height:150rpx;
+  /* flex-wrap: warp;
+  white-space: pre-wrap; */
+  font-size:default;
+  color:#fff;
+  z-index: 999;
+  opacity:0.9;
+}
+.fixbtn2{
+  width: 200rpx;
+  height:200rpx;
+  border-radius:180rpx;
+  position:fixed;
+  background:#ade3f8;
+  text-align: center;
+  line-height:150rpx;
+  /* flex-wrap: warp;
+  white-space: pre-wrap; */
+  font-size:default;
+  color:#fff;
+  z-index: 999;
+  opacity:0.9;
+}
+.foot{
+  width: 100%;
+  height:150rpx;
+  position: absolute;
+  z-index: 1100;
+  top:0;
+  opacity: 0.9;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(250, 251, 252);
+}
+.current{
+  color: #4b4c4d;
+}
+.pass{
+  color: #4b4c4d;
+}
+.last{
+  color: #4b4c4d;
+}
+.currentset{
+  color: #0084ff;
+  font-size: x-large;
+}
+.passset{
+  color: #ff9900;
+  font-size: x-large;
+}
+.lastset{
+  color: #ff0000f3;
+  font-size: x-large;
+}

@@ -17,12 +17,12 @@
       <view class="info">
        <view class="name">
          <image class="iconset" src="../../icons/name.png"></image>
-          <input class="inputset" placeholder="请输入账号"></input>
+          <input class="inputset" placeholder="请输入账号" bindinput="getname"></input>
        </view>
        <view class="line"></view>
        <view class="passwork">
          <image class="iconset" src="../../icons/passwork.png"></image> 
-         <input class="inputset" placeholder="请输入密码"></input>
+         <input class="inputset" placeholder="请输入密码" bindinput="getpasswork"></input>
        </view>
        <view class="line"></view>
       </view>

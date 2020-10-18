@@ -1,0 +1,47 @@
+/* pages/deliver/unload/unload.wxss */
+.page{
+ 
+}
+.head{
+ width:100%;
+ height:120rpx;
+}
+.unload{
+ font-size: xx-large;
+ color: rgb(132, 134, 139);
+ text-align: center;
+}
+.line{
+  background: #d5d5db;
+  width: 100%;
+  height: 5rpx;
+}
+.body{
+  margin: 0 30rpx 0 30rpx;
+}
+.infoset{
+ display: flex;
+ margin-top: 50rpx;
+ align-items: center;
+ justify-content: flex-start;
+ height: 100%;
+}
+.titleset{
+  font-size: x-large;
+  color: #8a8a8f;
+}
+.detail{
+  font-size: default;
+  color: #969e9e;
+  width:450rpx;
+  margin-top: 2rpx;
+}
+.foot{
+  bottom: 40rpx;
+  display: flex;
+  justify-content: center;
+}
+.continue{
+  position: fixed;
+  bottom: 80rpx;
+}

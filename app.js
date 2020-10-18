@@ -1,11 +1,18 @@
 //app.js
+wx.cloud.init({
+  env:'happy-deliver',
+  traceUser: true,
+})
 App({
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
+    wx.cloud.init({
+      env:'happy-deliver-n19h9',
+      traceUser: true,
+  })
     // 登录
     wx.login({
       success: res => {

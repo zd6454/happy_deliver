@@ -22,7 +22,7 @@
   box-shadow: 0rpx 10rpx 90rpx 10rpx rgb(119, 198, 235);
 }
 .body{
-  margin-top: 40rpx;
+  margin-top: 120rpx;
   justify-content: center;
   display: block;
 }
@@ -62,7 +62,7 @@
 
 .login{
   width:100%;
-  margin-top: 40rpx;
+  margin-top: 150rpx;
 }
 .info{
 
@@ -89,7 +89,7 @@
  margin-top: 30rpx;
 }
 .comfirm{
- margin-top: 50rpx;
+ margin-top: 100rpx;
 }
 .bt3{
   background-color: #0976f3;
