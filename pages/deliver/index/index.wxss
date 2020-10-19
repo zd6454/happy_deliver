@@ -3,8 +3,8 @@
 
 }
 .map{
-  height: 1200rpx;
-  width:100%;
+  height: 100vh;
+  width: 100vw;
 }
 .mapdetail{
    height: 100%;
@@ -24,6 +24,7 @@
   color:#fff;
   z-index: 999;
   opacity:0.9;
+  box-shadow:  5rpx 7rpx 30rpx 2rpx #4bcafc;
 }
 .fixbtn1{
   width: 200rpx;
@@ -39,6 +40,7 @@
   color:#fff;
   z-index: 999;
   opacity:0.9;
+  box-shadow:  5rpx 7rpx 30rpx 2rpx #f1e20d;
 }
 .fixbtn2{
   width: 200rpx;
@@ -54,10 +56,11 @@
   color:#fff;
   z-index: 999;
   opacity:0.9;
+  box-shadow:  5rpx 7rpx 30rpx 2rpx #ade3f8;
 }
 .foot{
   width: 100%;
-  height:150rpx;
+  height:129rpx;
   position: absolute;
   z-index: 1100;
   top:0;
@@ -76,7 +79,7 @@
   color: #4b4c4d;
 }
 .currentset{
-  color: #0084ff;
+  color: #71c7f8;
   font-size: x-large;
 }
 .passset{

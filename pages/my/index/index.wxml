@@ -1,5 +1,39 @@
-<view>
-  <view class="head"></view>
-  <view class="body"></view>
+<view class="page">
+  <view class="head">
+     <view class="avatar">
+        <image class="image"></image>
+     </view>
+     <view class="userinfo">
+      <view class="nickName">王德发</view>
+      <view class="work">
+         <view class="job">配送员</view>
+         <view class="number">123456</view>
+      </view>
+     </view>
+     <view class="switch">></view>
+  </view>
+  <view class="body">
+     <view class="card">
+         <view wx:for="{{items}}"  wx:for-index='index' wx:key='index' wx:for-item='item' class="list">
+            <view data-item="item" class="inline">
+               <view class="myinfo">
+                  <view class="iconset"><image class="icon" src="{{item.icon}}"></image></view>
+                  {{item.myinfo}}
+               </view>
+               <view data-item="item" class="switch">></view>
+            </view>
+            <view class="line"></view>
+         </view>
+     </view>
+     <view class="card2">
+         <view class="inline2">
+            <view class="myinfo">
+                  <view class="iconset"><image class="icon" src="../../../icons/setting.png"></image></view>
+                  设置
+               </view>
+               <view data-item="item" class="switch">></view>
+            </view>
+     </view>
+  </view>
   <view class="foot"></view>
 </view>

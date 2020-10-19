@@ -5,7 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    items:[
+      {myinfo:"我的信息",url:"",icon:"../../../icons/info.png"},
+      {myinfo:"异常订单",url:"",icon:"../../../icons/bad_order.png"},
+      {myinfo:"我的轨迹",url:"",icon:"../../../icons/tranc.png"},
+      {myinfo:"我的车号",url:"",icon:"../../../icons/number.png"},
+    ]
   },
 
   /**
