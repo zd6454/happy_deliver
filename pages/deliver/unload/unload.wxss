@@ -35,6 +35,15 @@
   color: #969e9e;
   width:450rpx;
   margin-top: 2rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap;  
+}
+.line{
+  background: #eaf0f3;
+  width: 100%;
+  height: 2rpx;
+  margin-top: 15rpx;
 }
 .foot{
   bottom: 40rpx;

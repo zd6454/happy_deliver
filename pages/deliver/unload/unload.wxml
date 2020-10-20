@@ -10,6 +10,7 @@
           <view class="titleset">{{item.title}}:</view>  
           <view class="detail">{{item.info}}</view>  
         </view>
+        <view class="line"></view>
       </view>
     </view> 
     <view class="foot">

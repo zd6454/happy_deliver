@@ -1,0 +1,21 @@
+<!--pages/my/info/info.wxml-->
+<view class="page">
+  <view class="head">
+    <view wx:for="{{baseinfo}}"  wx:key="index">
+      <view class="inline" >
+        <view class="title">{{item.title}}:</view>
+        <view class="info">{{item.info}}</view>
+      </view>
+      <view class="line"></view>
+    </view>
+  </view>
+  <view class="body">
+    <view wx:for="{{baseset}}"  wx:key="index">
+      <view class="inline2" >
+        <view class="title">{{item.title}}:</view>
+        <view class="info">{{item.info}}</view>
+      </view>
+      <view class="line"></view>
+    </view>
+  </view>
+</view>

@@ -85,7 +85,7 @@
 .line{
  background: #41cef9;
  width: 100%;
- height: 5rpx;
+ height: 2rpx;
  margin-top: 30rpx;
 }
 .comfirm{

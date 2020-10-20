@@ -6,7 +6,8 @@
     "pages/deliver/index/index",
     "pages/deliver/unload/unload",
     "pages/deliver/complete/complete",
-    "pages/my/index/index"
+    "pages/my/index/index",
+    "pages/my/info/info"
   ],
   "window":{
     "backgroundTextStyle":"light",

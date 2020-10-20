@@ -1,9 +1,9 @@
 /* pages/my/index/index.wxss */
 .page{
  background-color: rgb(240, 242, 245);
- direction: column;
+ /* direction: column;
  align-items: center;
- justify-content: center;
+ justify-content: center; */
  height: 100vh;
  width: 100vw;
 }
@@ -56,8 +56,15 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   color: #afb4b6;
+   color: white;
    right: 0;
+ }
+ .switch2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(221, 214, 214);
+  right: 0;
  }
  .body{
    width:100%;
@@ -66,7 +73,7 @@
  .card{
    margin: 20rpx  ;
    width:90;
-   box-shadow:  0rpx 1rpx 0rpx 2rpx #ffffff;
+   box-shadow:  0rpx -3rpx 7rpx 2rpx #ffffff;
    background-color: #ffffff;
    border-radius: 10rpx;
  }

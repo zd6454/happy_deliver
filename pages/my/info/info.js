@@ -1,25 +1,22 @@
-// pages/my/index/index.js
+// pages/my/info/info.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    items:[
-      {myinfo:"我的信息",url:"../info/info",icon:"../../../icons/info.png"},
-      {myinfo:"异常订单",url:"",icon:"../../../icons/bad_order.png"},
-      {myinfo:"我的轨迹",url:"",icon:"../../../icons/tranc.png"},
-      {myinfo:"我的车号",url:"",icon:"../../../icons/number.png"},
-    ],
-    index:0,
+     baseinfo:[
+       {title:"姓名",info:"王德法"},
+       {title:"工号",info:"123456"},
+       
+     ],
+     baseset:[
+      {title:"工作时间",info:"7:00-18:00"},
+      {title:"电话",info:"0123123123"},
+      {title:"地址",info:"北京市通州区通州区招商局物流集团(北京有限公司)"}
+     ]
   },
-  switchto(e){
-   const{items}=this.data;
-   const{index}=e.target.dataset;
-   wx.navigateTo({
-     url: items[index].url,
-   })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
