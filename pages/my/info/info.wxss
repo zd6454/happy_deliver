@@ -20,8 +20,11 @@
 }
 .title{
  font-size:default;
- color: rgb(131, 131, 131);
+ color: rgb(35, 36, 37);
  margin-left: 10rpx;
+ /* overflow:hidden; 
+ text-overflow:ellipsis; */
+ white-space:nowrap;  
 }
 .info{
   font-size: small;

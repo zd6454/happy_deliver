@@ -93,6 +93,18 @@
         {
           "name": "pages/my/info/info",
           "pathName": "pages/my/info/info",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/bad_order/bad_order",
+          "pathName": "pages/my/bad_order/bad_order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/my_number/my_number",
+          "pathName": "pages/my/my_number/my_number",
           "scene": null
         }
       ]

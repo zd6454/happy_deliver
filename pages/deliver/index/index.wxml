@@ -1,12 +1,12 @@
 <!--pages/deliver/index/index.wxml-->
 <view class="page">
     <view class="map">
-      <map class="mapdetail" longitude="116.451028" latitude="39.949643" scale="12" markers="{{markers}}" polyline="{{polyline}}">
+      <map id="myMap"  show-location="true"   class="mapdetail" longitude="{{longitude}}" latitude="{{latitude}}" scale="12" markers="{{markers}}" polyline="{{polyline}}"  >
       
       </map>
     </view>
     <view class="body">
-     <button catchtouchmove="buttonMove" bindtouchstart ="buttonStart" bindtouchend="buttonEnd" style="top:{{buttonTop}}px;left:{{buttonLeft}}px;width:200rpx;" bindtap="deliverStart" hover-class="fixbtn2" class="{{isDeliver==true?'fixbtn1':'fixbtn'}}">
+     <button catchtouchmove="buttonMove" bindtouchstart ="buttonStart" bindtouchend="buttonEnd" style="top:{{buttonTop}}px;left:{{buttonLeft}}px;width:150rpx;" bindtap="deliverStart" hover-class="fixbtn2" class="{{isDeliver==true?'fixbtn1':'fixbtn'}}">
       {{buttomtext}}
      </button>
     </view>

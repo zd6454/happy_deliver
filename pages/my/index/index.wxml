@@ -1,7 +1,7 @@
 <view class="page">
   <view class="head">
      <view class="avatar">
-        <image class="image"></image>
+        <image class="image"  src="{{avatarUrl}}"></image>
      </view>
      <view class="userinfo">
       <view class="nickName">王德发</view>
@@ -14,7 +14,7 @@
   </view>
   <view class="body">
      <view class="card">
-         <view wx:for="{{items}}"  wx:for-index='index' wx:key='index' wx:for-index='index' class="list">
+         <view wx:for="{{items}}"  wx:for-index='index' wx:key='index'  class="list">
             <view data-index="{{index}}" class="inline" bindtap="switchto">
                <view class="myinfo">
                   <view class="iconset"><image class="icon" src="{{item.icon}}"></image></view>

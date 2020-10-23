@@ -1,6 +1,12 @@
 // pages/deliver/index/index.js
 var amapFile = require('../../../utils/amap-wx.js');
 var startPoint;
+var QQMapWX = require('../../../utils/qqmap-wx-jssdk.js');
+var key='6N7BZ-Z6533-RVL3F-YY3R2-O6MKT-BTFE6';
+var  qqmapsdk = new QQMapWX({
+  key:key
+});
+const mapCtx = wx.createMapContext('myMap');
 Page({
 
   /**
@@ -45,7 +51,10 @@ Page({
   ],
     distance: '',
     cost: '',
-    polyline: []
+    polyline: [],
+    latitude:"39.989643",
+    longitude:"116.481028",
+    staticmapUrl:"",
     },
 
 
@@ -82,7 +91,23 @@ Page({
   },
   //点击开始派送按钮
   deliverStart:function(){
-
+    let that=this;
+  this.getCenterLocation();
+  wx.getLocation({
+    type: 'wgs84',
+    success: function(res) {
+      var latitude = res.latitude
+      var longitude = res.longitude
+      var speed = res.speed
+      var accuracy = res.accuracy
+      console.log(res,"88");
+      that.setData({
+       latitude:latitude,
+       longitude:longitude,
+      })
+       that.moveToLocation(longitude,latitude);
+    }
+  })
   const{isDeliver}=this.data;
 
   const text=!isDeliver?"卸货":"派送";
@@ -93,17 +118,45 @@ Page({
      })
    }
   },
-
+  //获取静态地图
+  getStaticMap(){
+    let that=this;
+    const {markers}=this.data;
+    var myAmapFun = new amapFile.AMapWX({key:'	d761d2b7544fb04ddf783a0196fab4d3'});
+    myAmapFun.getStaticmap({
+      zoom:3,
+      markers:markers,
+      traffic:1,
+      success:res=>{
+        console.log(res,"staticmap");
+        that.setData({
+          staticmapUrl:res.url,
+        })
+      },
+      fail:err=>{
+       console.log(err,"staticmap");
+      }
+    })
+  },
+  //地图划线操作高德版
   drawline(){
     var that = this;
-    // var key = config.Config.key;
-    var myAmapFun = new amapFile.AMapWX({key: 'd761d2b7544fb04ddf783a0196fab4d3'});
-    myAmapFun.getDrivingRoute({
-      origin: '116.481028,39.989643',
-      waypoints:'116.481028,39.8000',
-      destination: '116.408775,39.90816',
-      success: function(data){
+    const {latitude,longitude}=this.data;
+    const extensions="extensions=all&";
+    const origin='origin='+longitude+','+latitude+'&';
+    const destination='destination=116.408775,39.90816&';
+    const key='key=6fa11bd81ec9556c0182ee27e1c61328'
+    const hight='hight=1.6&';
+    const load='load=0.9&';
+    const waypoints='waypoints=116.481028,39.8000&';
+    const url= 'https://restapi.amap.com/v3/direction/driving?&strategy=9&'
+    +origin+waypoints+destination+extensions+key;
+    wx.request({
+      url: url,
+      success:res=>{
+        console.log(res,"data2")
         var points = [];
+        const data=res.data.route;
         if(data.paths && data.paths[0] && data.paths[0].steps){
           var steps = data.paths[0].steps;
           for(var i = 0; i < steps.length; i++){
@@ -128,25 +181,68 @@ Page({
             distance: data.paths[0].distance + '米'
           });
         }
-        if(data.taxi_cost){
-          that.setData({
-            cost: '打车约' + parseInt(data.taxi_cost) + '元'
-          });
-        }
-          
-      },
-      fail: function(info){
-
       }
     })
   },
-
+  
+  getCenterLocation: function () {
+    mapCtx.getCenterLocation({
+      success: function(res){
+        console.log(res,"center")
+      },
+      fail:err=>{
+        console.log(err);
+      }
+    })
+  },
+  moveToLocation: function (t1,t2) {
+    let that=this;
+    that.drawline();
+    mapCtx.moveToLocation({
+      longitude:t1,
+      latitude:t2,
+      success:res=>{
+        console.log(res,"success");
+      },
+      faile:err=>{
+        console.log(err);
+      },
+      complete:res=>{
+        console.log(res);
+      }
+    })
+  },
+  translateMarker: function() {
+    mapCtx.translateMarker({
+      markerId: 0,
+      autoRotate: true,
+      duration: 1000,
+      destination: {
+        latitude:23.10229,
+        longitude:113.3345211,
+      },
+      animationEnd() {
+        console.log('animation end')
+      }
+    })
+  },
+  includePoints: function() {
+    mapCtx.includePoints({
+      padding: [10],
+      points: [{
+        latitude:23.10229,
+        longitude:113.3345211,
+      }, {
+        latitude:23.00229,
+        longitude:113.3345211,
+      }]
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     var that =this;
-    this.drawline();
     wx.getSystemInfo({
       success: function (res) {
         console.log(res);
@@ -166,7 +262,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
@@ -180,14 +276,14 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+   this.getStaticMap();
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    this.getStaticMap();
   },
 
   /**

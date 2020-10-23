@@ -1,0 +1,53 @@
+/* pages/my/my_number/my_number.wxss */
+.page{
+  background-color: rgb(240, 242, 245);
+  height: 100vh;
+  width: 100vw;
+}
+.body{
+
+}
+.card{
+  width:90;
+  box-shadow:  0rpx -3rpx -1rpx 12rpx #ffffff;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+}
+.setting{
+  display: flex;
+  justify-content: space-between;
+  margin: 30rpx;
+  height: 110rpx;
+  align-items: center;
+  text-align: center;
+}
+.head{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  background-color: #679dee;
+  color: white;
+  line-height: 62rpx;
+}
+.content{
+  
+}
+.number{
+  font-size: default;
+  color: rgb(109, 111, 114);
+
+}
+.time{
+  font-size: default;
+  color: rgb(178, 181, 184);
+}
+.foot{
+  font-size: small;
+  color: rgb(178, 181, 184);
+}
+.line{
+  background: #eee9e9;
+  width: 97%;
+  height: 1rpx;
+  margin-left: 38rpx;
+}

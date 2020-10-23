@@ -1,0 +1,58 @@
+/* pages/my/bad_order/bad_order.wxss */
+.page{
+  background-color: rgb(240, 242, 245);
+  height: 100vh;
+  width: 100vw;
+}
+.body{
+}
+.card{
+  width:90;
+  box-shadow:  0rpx -3rpx -1rpx 12rpx #ffffff;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+}
+.setting{
+   display :flex;
+  justify-content: space-between;
+  margin: 30rpx;
+}
+.type{
+ 
+}
+.avatar{
+  height: 70rpx;
+  width:70rpx;
+  border-radius: 50%;
+  background-color: rgb(22, 136, 235);
+}
+.content{
+  width:486rpx;
+}
+.title{
+  font-size: samll;
+  color: rgb(23, 23, 24);
+  margin-left: 20rpx;
+}
+.address{
+  font-size: small;
+  color: rgb(178, 181, 184);
+  margin-left: 20rpx;
+  margin-top:10rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap;  
+}
+.detail{
+  font-size: small;
+  color: rgb(178, 181, 184);
+  white-space:nowrap;
+  margin-right: 5rpx;
+}
+.line{
+  background: #eee9e9;
+  width: 97%;
+  height: 1rpx;
+  margin-top: 12rpx;
+  margin-left: 30rpx;
+}

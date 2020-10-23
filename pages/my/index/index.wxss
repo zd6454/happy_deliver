@@ -73,12 +73,12 @@
  .card{
    margin: 20rpx  ;
    width:90;
-   box-shadow:  0rpx -3rpx 7rpx 2rpx #ffffff;
+   box-shadow:  0rpx -3rpx -1rpx 12rpx #ffffff;
    background-color: #ffffff;
    border-radius: 10rpx;
  }
  .list{
-
+  height:82rpx;
  }
  .inline{
    display: flex;
@@ -96,12 +96,13 @@
   align-items: center;
   text-align: center;
   align-content: center;
+  height: 68rpx;
 }
  .line{
   background: #e7e3e3;
   width: 97%;
   height: 1rpx;
-  margin-top: 10rpx;
+  margin-top: 19rpx;
   margin-left: 20rpx;
  }
  
@@ -109,9 +110,10 @@
   display: flex;
   font-size:medium;
   color: #85888a;
+  align-items: center;
  }
  .iconset{
-   margin:0 20rpx 0 20rpx;
+   margin:15rpx 20rpx 0 20rpx;
  }
  .icon{
    width:40rpx;
@@ -121,11 +123,10 @@
    margin-bottom: 9rpx;
  }
  .card2{
-  margin: 20rpx  ;
+  margin: 0rpx 20rpx 20rpx 20rpx ;
   width: 95%;
   box-shadow:  0rpx 1rpx 0rpx 2rpx #ffffff;
   background-color: #ffffff;
   border-radius: 10rpx;
   position: absolute;
-  bottom: 60rpx;
  }

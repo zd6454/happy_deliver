@@ -7,11 +7,12 @@ Page({
   data: {
     items:[
       {myinfo:"我的信息",url:"../info/info",icon:"../../../icons/info.png"},
-      {myinfo:"异常订单",url:"",icon:"../../../icons/bad_order.png"},
+      {myinfo:"异常订单",url:"../bad_order/bad_order",icon:"../../../icons/bad_order.png"},
       {myinfo:"我的轨迹",url:"",icon:"../../../icons/tranc.png"},
-      {myinfo:"我的车号",url:"",icon:"../../../icons/number.png"},
+      {myinfo:"我的车号",url:"../my_number/my_number",icon:"../../../icons/number.png"},
     ],
     index:0,
+    avatarUrl:"",
   },
   switchto(e){
    const{items}=this.data;
@@ -20,11 +21,26 @@ Page({
      url: items[index].url,
    })
   },
+  getAvatar(){
+    wx.cloud.getTempFileURL({
+      fileList: ['cloud://happy-deliver-n19h9.6861-happy-deliver-n19h9-1303910703/user_avatar/1111.jpg'],
+      success: res => {
+        // get temp file URL
+        console.log(res.fileList)
+        this.setData({
+          avatarUrl:res.fileList[0].tempFileURL
+        })
+      },
+      fail: err => {
+        // handle error
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+     this.getAvatar();
   },
 
   /**
