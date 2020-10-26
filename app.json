@@ -2,6 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/order/index/index",
+    "pages/order/choose/choose",
+    "pages/order/detail/detail",
     "pages/logs/logs",
     "pages/deliver/index/index",
     "pages/my/index/index"

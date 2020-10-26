@@ -1,0 +1,9 @@
+<view class="titile">产品详情</view>
+<view class="item">产品名称：</view>
+<view class="item">吨位：</view>
+<view class="item">体积：</view>
+<view class="item">配送数量：</view>
+<view class="item">配送时间：</view>
+<view class="item">配送地址：</view>
+
+

@@ -1,2 +1,23 @@
 <!--pages/order/index/index.wxml-->
-<text>pages/order/index/index.wxml</text>
+<view class=" topper" >请选择车号</view>
+
+<view class="topline"></view>
+
+<view class="bottomline"></view>  
+
+
+<view wx:for="{{num}}">
+  <view class="outter">
+  <view class="left">金杯</view>
+  <view class="right">
+    <view>序号：1</view>
+    <view class="btn" bindtap="choose">选择</view>
+  </view>
+  </view>
+  <view class="line"></view>
+
+</view>
+
+
+
+

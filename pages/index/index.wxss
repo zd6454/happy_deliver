@@ -19,7 +19,7 @@
   height: 562rpx;
   margin-top: 40rpx;
   border-radius: 110rpx ;
-  box-shadow: 0rpx 10rpx 90rpx 10rpx rgb(119, 198, 235);
+  box-shadow: 0rpx 0rpx 90rpx 10rpx rgb(119, 198, 235);
 }
 .body{
   margin-top: 40rpx;
@@ -42,10 +42,11 @@
   border-radius:40rpx ;
 }
 .bt11{
-  margin-top: 20rpx; 
+  /* margin-top: 20rpx; 
   background-color: #a5d5f5;
   color: white;
-  border-radius:40rpx ;
+  border-radius:40rpx ; */
+  background: #a5d5f5;
 }
 .bt2{
  margin-top: 20rpx; 

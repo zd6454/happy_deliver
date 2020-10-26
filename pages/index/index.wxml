@@ -4,6 +4,7 @@
         <image class="logoset" src="../../icons/logo.png"></image>
      </view>
     </view>
+
     <view class="body" wx:if="{{!isLogin}}">
        <view class="fontset">
         请选择演示时间
@@ -13,6 +14,7 @@
           <button  class="bt2" style="width:60%" hover-class="bt22" bindtap="chooseSecond">6月23日</button>
        </view>
     </view>
+    
     <view class="login" wx:else>
       <view class="info">
        <view class="name">

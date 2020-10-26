@@ -1,0 +1,17 @@
+<view wx:for="{{num}}" class="bk">
+  <view class="div1">
+    1
+  </view>
+  <view class="div2">
+    <view class="top">
+      <text class="top_left" >产品A</text>
+      <text class="top_right">8:00--16：00</text>
+    </view>
+    <view class="add">北京市通州区马驹桥镇柏福村北500米（柏福物流）</view>
+  </view>
+  <view class="div3">
+    <text class="num2">*12</text>
+    <text class="detail" bindtap="detail">详情</text>
+  </view>
+</view>
+

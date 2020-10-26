@@ -1,0 +1,16 @@
+page{
+  background-color: lightblue;
+}
+.titile{
+  font-size: larger;
+  text-align: center;
+  border-bottom: cornflowerblue 1px solid;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.item{
+  border-bottom: cornflowerblue 1px solid;
+  height: 90rpx;
+  line-height: 90rpx;
+  padding-left: 15px;
+}

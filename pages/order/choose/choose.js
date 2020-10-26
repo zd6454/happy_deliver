@@ -1,11 +1,11 @@
-// pages/order/index/index.js
+// pages/order/choose/choose.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    num:4
+    num:5
   },
 
   /**
@@ -63,9 +63,9 @@ Page({
   onShareAppMessage: function () {
 
   },
-  choose () {
+  detail(){
     wx.navigateTo({
-      url: '../choose/choose',
+      url: '../detail/detail',
     })
   }
 })
